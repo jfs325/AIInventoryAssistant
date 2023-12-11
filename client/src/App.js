@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.css"
 import "./styling.css"
-import LoadingScreen from './LoadingScreen';
 import './LoadingScreen.css';
+import LoadingScreen from './LoadingScreen';
 
 export default function EditPost() {
   // allow for change to Loading Screen
