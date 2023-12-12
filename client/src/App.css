@@ -60,5 +60,32 @@
 
 textarea {
   margin-top: 10px;
-  width: 80%; /* Adjust as needed */
+  width: 70%;
+  height: 80%; /* Adjust as needed */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  border: 3px solid #000E23; /* Light grey border */}
+
+.button-container {
+    display: flex; /* Establishes a flex container */
+    justify-content: center; /* Center horizontally */
+    /* Optional: align-items: center; to center vertically as well */
+}
+
+.my-button {
+    position: relative; /* or absolute, fixed, depending on use case */
+    bottom: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black; /* White text */
+    padding: 15px 32px; /* sPadding around the text */
+    border: 2px solid #000E23; 
+    color: black; /* Lighter text color for the description */
+    font-size: 1.2em;
+    justify-content: center; /* Center horizontally */
+    border-radius: 12px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+  
+.my-button:hover {
+  background-color: rgba(255, 255, 255, 0.8); 
 }

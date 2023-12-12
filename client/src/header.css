@@ -1,0 +1,27 @@
+/* Style for the header */
+.site-header {
+    background: linear-gradient(
+        to bottom, 
+        rgba(255, 255, 255, .9) 15%, /* Start with full opacity */
+        rgba(255, 255, 255, .4) 70% /* End with full transparency */
+    );
+    padding: 20px; /* Add some padding inside the header */
+    text-align: center; /* Center align the text */
+    border-bottom: 2px solid #333;
+}
+
+/* Style for the title */
+.site-header h1 {
+    margin: 0 0 10px; /* Remove default margin and add a bottom margin */
+    color: #333; /* Dark text color for the title */
+    font-size: 2.5em; /* Larger font size for the title */
+    z-index: 10;
+}
+
+/* Style for the description */
+.site-header p {
+    margin: 0; /* Remove default margin */
+    color: #666; /* Lighter text color for the description */
+    font-size: 1.2em; /* Slightly larger font size for the description */
+    z-index: 10;
+}

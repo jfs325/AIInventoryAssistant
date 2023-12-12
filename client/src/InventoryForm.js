@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import "./App.css";
 
 const defaultText = 
 `4 cases of baked beans 16 12 ounce cans
@@ -34,19 +35,19 @@ const InventoryForm = () => {
             <input name="Inventory Title" defaultValue="Inventory" />
           </label>
         </div>
-        <hr />
         <div className="text-container">
           <h2>Dictate or type your inventory commands here:</h2>
           <textarea
             name="postContent"
             defaultValue={defaultText}
-            rows={60}
-            cols={35}
+            rows={50}
+            cols={20}
           />
         </div>
-        <hr />
         <button type="reset">Reset edits</button>
-        <button type="submit">Save post</button>
+        <div class="button-container">
+          <button className="my-button">Submit Commands</button>
+        </div>
       </form>
     </div>
   );
