@@ -1,17 +1,20 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import "./App.css"
 import "./styling.css"
 import './LoadingScreen.css';
 import LoadingScreen from './LoadingScreen';
 import InventoryForm from "./InventoryForm";
+import DownloadPage from "./DownloadPage";
 
 export default function App() {
-
   return (
-    <div>
-      <InventoryForm></InventoryForm>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<InventoryForm />} />
+        <Route path="/download" element={<DownloadPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

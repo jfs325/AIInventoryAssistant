@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LoadingScreen from './LoadingScreen';
+import { useNavigate } from "react-router-dom";
 
 const defaultText = 
 `4 cases of baked beans 16 12 ounce cans
@@ -7,11 +7,10 @@ const defaultText =
  3 more cases of baked beans`;
 
 const InventoryForm = () => {
-  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
 
     const form = e.target;
     const formData = new FormData(form);
@@ -21,38 +20,11 @@ const InventoryForm = () => {
       commands: formJson['postContent'],
       title: formJson['Inventory Title'],
     };
-
-    try {
-      const response = await fetch('http://localhost/api/callopenai', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-    // generate CSV file from data
-    const { csv_data, title } = await response.json();
-    const blob = new Blob([csv_data], { type: 'text/csv' });
-    const link = document.createElement('a');
-    link.href = window.URL.createObjectURL(blob);
-    link.download = `${title}_data.csv`;
-    document.body.appendChild(link);
-    
-    // Trigger a click on the link to start the download
-    link.click();
-
-    } catch {
-      console.log("Error getting response");
-    } finally {
-      setLoading(false);
-    }
+    navigate('/download', {state: {data}});  
   };
 
   return (
     <div>
-      {loading && <LoadingScreen />}
       <form method="post" onSubmit={handleSubmit}>
         <div className="title-container">
           <label>
