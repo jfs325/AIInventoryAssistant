@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import "./App.css"
-import "./styling.css"
-import './LoadingScreen.css';
+import "../styling.css"
 import InventoryForm from "./InventoryForm";
-import DownloadPage from "./DownloadPage";
-import Header from "./Header";
+import DownloadPage from "../DownloadPage/DownloadPage";
+import Header from "../Header/Header";
 
 export default function App() {
   return (

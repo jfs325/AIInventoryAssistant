@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import "./App.css";
+import "../styling.css";
 
 const defaultText = 
 `4 cases of baked beans 16 12 ounce cans

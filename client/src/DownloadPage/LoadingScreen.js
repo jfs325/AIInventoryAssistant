@@ -1,10 +1,13 @@
 // LoadingScreen.js
 import React from 'react';
+import Spinner from './Spinner';
+import "./LoadingScreen.css";
 
 const LoadingScreen = () => {
   return (
     <div className="loading-screen">
-      <p>Loading...</p>
+      <Spinner/>
+      <p>Processing your commands and generating CSV...</p>
     </div>
   );
 };
