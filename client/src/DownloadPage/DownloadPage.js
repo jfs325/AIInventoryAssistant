@@ -2,14 +2,23 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import LoadingScreen from './LoadingScreen';
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+import "./DownloadPage.css";
+import "../styling.css";
+
+
 
 const DownloadPage = () => {
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [downloadUrl, setDownloadUrl] = useState('');
   const [fileName, setFileName] = useState('');
   const location = useLocation();
   const data = location.state; // Data from InventoryForm
 
+  const handleNavigate = async () => {
+    navigate('/');  
+    };
   useEffect(() => {
     processCommands();
   }, []);
@@ -39,8 +48,15 @@ const DownloadPage = () => {
   return (
     <div>
       {loading && <LoadingScreen/>}
-      <h1>Download your CSV file</h1>
-      {downloadUrl && <a href={downloadUrl} download={fileName}>Download File</a>}
+      <div className='download-container'>
+        <div className='header-text'>
+          <h1>Download your CSV file:</h1>
+      </div>
+      {downloadUrl && <a href={downloadUrl} className="download-link" download={fileName}>Download File</a>}
+      <div className='return-button'>
+        <button onClick={handleNavigate} className="my-button">Return to main page</button>
+      </div>
+      </div>
     </div>
   );
 };

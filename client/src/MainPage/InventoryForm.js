@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import "./App.css";
+import "../styling.css";
 
 const defaultText = 
 `4 cases of baked beans 16 12 ounce cans
@@ -29,24 +31,28 @@ const InventoryForm = () => {
         <div className="title-container">
           <label>
             <div className="header-spacing">
-              <h4>Inventory Title:</h4>
+              <div className="header-text">
+                <h3>Inventory Title:</h3>
+              </div>
             </div>
-            <input name="Inventory Title" defaultValue="Inventory" />
+              <input name="Inventory Title" defaultValue="Inventory" />
           </label>
         </div>
-        <hr />
         <div className="text-container">
-          <h2>Dictate or type your inventory commands here:</h2>
+          <div className="header-text">
+            <h2>Dictate or type your inventory commands here:</h2>
+          </div>
           <textarea
             name="postContent"
             defaultValue={defaultText}
-            rows={60}
-            cols={35}
+            rows={50}
+            cols={20}
           />
+          {/* </div> */}
         </div>
-        <hr />
-        <button type="reset">Reset edits</button>
-        <button type="submit">Save post</button>
+        <div class="button-container">
+          <button className="my-button">Submit Commands</button>
+        </div>
       </form>
     </div>
   );

@@ -1,21 +1,23 @@
+html, body {
+  height: 100%; /* Ensure full height coverage */
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+}
 
 body {
-    /* background-color: #FFE0B5; Replace with your desired color code or name */
-    margin: 0; /* Reset default margin */
-    padding: 0; /* Reset default padding */
-    background: linear-gradient(to bottom , #FFE0B5, #FFCC85);
-    /* border: 10px solid #FF8B65;  */
-  }
-  
-  body::before {
-    content: ''; /* Required content for pseudo-element */
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: url('boxes.jpg');
-    background-size: cover;
-    opacity: .05;
-    z-index: -1;
-  }
+  content: ''; /* Required content for pseudo-element */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('mesh.png');
+  background-size: cover;
+  background-repeat: no-repeat; /* Ensure the image doesn't repeat */
+  opacity: 1;
+  z-index: -1;
+}
+
+.header-text {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
