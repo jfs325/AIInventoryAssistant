@@ -41,8 +41,13 @@
   margin-bottom: 0px;
 }
 
+.header-text {
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Add these styles to center the container */
 .title-container {
+  position: relative;
   margin-top: 0px;
   display: flex;
   flex-direction: column;
@@ -50,23 +55,52 @@
   height: 10vh; /* 100% of the viewport height */
 }
 
+input {
+  background-image: linear-gradient(to top, #fff1f1, #f9f9f9);
+  padding: 3px 3px;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  text-align: center; /* Centers text horizontally */
+  margin-right: 4px;
+  border: 2px solid #000E23; /* Light grey border */  
+}
+
+input:focus {
+  border: 2.5px solid #000000; /* Highlight border on focus */
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.3);
+  outline: none; /* Remove default focus outline */
+
+}
+
 .text-container {
-  margin-top: 5px;
+  width: 75%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: auto; /* Auto margin for horizontal centering */
+  margin-right: auto; /* Auto margin for horizontal centering */
   height: 100vh; /* 100% of the viewport height */
 }
 
 textarea {
-  margin-top: 10px;
-  width: 70%;
+  padding: 8px 12px;
+  margin-top: 2px;
+  background-image: linear-gradient(to top, #fff1f1, #f9f9f9);
+  width: 100%;
   height: 80%; /* Adjust as needed */
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  border: 3px solid #000E23; /* Light grey border */}
+  border: 2.5px solid #000E23; /* Light grey border */
+}
+
+textarea:focus {
+  border: 3px solid #000000; /* Highlight border on focus */
+  box-shadow: 8px 8px 18px rgba(0, 0, 0, 0.3); /* Glowing effect on focus */
+  outline: none; /* Remove default focus outline */
+}
 
 .button-container {
+    margin-top: 25px;
     display: flex; /* Establishes a flex container */
     justify-content: center; /* Center horizontally */
     /* Optional: align-items: center; to center vertically as well */
@@ -75,17 +109,32 @@ textarea {
 .my-button {
     position: relative; /* or absolute, fixed, depending on use case */
     bottom: 100px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background: linear-gradient(
+        to bottom, 
+        rgba(255, 255, 255, .7) 15%, /* Start with full opacity */
+        rgba(255, 255, 255, .45) 70% /* End with full transparency */
+    );
     color: black; /* White text */
     padding: 15px 32px; /* sPadding around the text */
-    border: 2px solid #000E23; 
+    border: 1.9px solid #000E23; 
     color: black; /* Lighter text color for the description */
     font-size: 1.2em;
     justify-content: center; /* Center horizontally */
     border-radius: 12px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
-}
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.25);
+    font-weight: 700; /* 700 is equivalent to bold */
+
+  }
   
 .my-button:hover {
-  background-color: rgba(255, 255, 255, 0.8); 
+  background-color: rgba(255, 255, 255, 0); 
+  border: 2px solid black;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.3); /* Glowing effect on focus */
+
 }
+
+
+

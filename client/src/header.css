@@ -3,7 +3,7 @@
     background: linear-gradient(
         to bottom, 
         rgba(255, 255, 255, .9) 15%, /* Start with full opacity */
-        rgba(255, 255, 255, .4) 70% /* End with full transparency */
+        rgba(255, 255, 255, .45) 70% /* End with full transparency */
     );
     padding: 20px; /* Add some padding inside the header */
     text-align: center; /* Center align the text */
@@ -24,4 +24,17 @@
     color: #666; /* Lighter text color for the description */
     font-size: 1.2em; /* Slightly larger font size for the description */
     z-index: 10;
+}
+
+.powered-by-container {
+    display: flex; /* Aligns children inline */
+    align-items: center; /* Centers children vertically */
+    justify-content: center; /* Optional: for horizontal centering within the container */
+}
+
+/* If GPTComponent renders an image or similar, you may need to style it as well */
+.powered-by-container img {
+    height: 30px; /* Example height, adjust as necessary */
+    width: auto; /* Maintain aspect ratio */
+    margin-left: 4px; /* Add some space between the text and the symbol */
 }

@@ -30,21 +30,25 @@ const InventoryForm = () => {
         <div className="title-container">
           <label>
             <div className="header-spacing">
-              <h4>Inventory Title:</h4>
+              <div className="header-text">
+                <h3>Inventory Title:</h3>
+              </div>
             </div>
-            <input name="Inventory Title" defaultValue="Inventory" />
+              <input name="Inventory Title" defaultValue="Inventory" />
           </label>
         </div>
         <div className="text-container">
-          <h2>Dictate or type your inventory commands here:</h2>
+          <div className="header-text">
+            <h2>Dictate or type your inventory commands here:</h2>
+          </div>
           <textarea
             name="postContent"
             defaultValue={defaultText}
             rows={50}
             cols={20}
           />
+          {/* </div> */}
         </div>
-        <button type="reset">Reset edits</button>
         <div class="button-container">
           <button className="my-button">Submit Commands</button>
         </div>
