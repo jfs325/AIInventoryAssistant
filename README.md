@@ -12,7 +12,6 @@ The purpose of this software is to save users time when taking physical inventor
 Here is an example of a list of commands you could give the application, for taking inventory of food items:
 ![Alt text](commands.png)
 
-
 Here is the spreadsheet that is returned to the user:
 ![Alt text](result.png)
 
