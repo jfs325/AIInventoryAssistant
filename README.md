@@ -1,10 +1,10 @@
 # AI Powered InventoryAssistant
 
-## Your personal assistant when taking inventory. You can talk to it like a human, and it will take your commands and return a spreadsheet back to you, intelligently tracking all your items!
+## Your personal assistant when taking inventory. You can talk to it like a human, and it will take your commands and return an inventory spreadsheet back to you, intelligently tracking all your items!
 
-The purpose of this software is to save users time when taking physical inventory of items. While users can type commands, the intended use case is using dictation on one's mobile device to say commands into the text box. This allows them more time to visually scan for items, say how much they see, any details, and then quickly move on to the next set of items. Once a user is done giving commands, they press the button "submit commands" which then delivers those commands to chatGPT, which compiles the commands into a JSON list of inventory items, which then gets converted into a csv file.
+The purpose of this software is to save users time when taking physical inventory of items. The intended use case is dictating text into the text box on one's mobile device. This improves efficiency by allowing the user only to have to visually scan for items, and then quickly move on to the next set of items. Once a user is done giving commands, they press the button "submit commands" which delivers those commands to chatGPT, compiling the commands into a JSON list of inventory items, which then gets converted into a CSV file.
 
- Below is a visual show of how data flows through the application: 
+ Below is a visual representation of how data flows through the application: 
 
 ![Alt Text](Application_Process.png)
 
@@ -22,6 +22,8 @@ Note that the application was able to intelligently track previously stated item
 This is by far not a perfect application, just an exploration of a use case for humanizing software using Language Learning Models. Here are some things I hope to work on in the future:
 
 Error checking to ensure that if the user enters non-inventory text, then it will tell the user that that is not what is is supposed to do. 
+
+Exploring different ways inventory can be represented, and accounting for multiple representations in the model. 
 
 Fine-tuning the model in order to allow subunits of items to be added. The model can add main units like "boxes" or "cases," but struggles to add smaller units, like cans within those boxes.
 
