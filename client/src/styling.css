@@ -6,14 +6,14 @@ html, body {
 
 body {
   content: ''; /* Required content for pseudo-element */
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background-image: url('mesh.png');
   background-size: cover;
-  background-repeat: no-repeat; /* Ensure the image doesn't repeat */
+  background-repeat: repeat; /* Ensure the image doesn't repeat */
   opacity: 1;
   z-index: -1;
 }

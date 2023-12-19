@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import Header from '../Header/Header';
 import "./App.css";
 import "../styling.css";
 
@@ -27,6 +28,7 @@ const InventoryForm = () => {
 
   return (
     <div>
+      <Header />
       <form method="post" onSubmit={handleSubmit}>
         <div className="title-container">
           <label>

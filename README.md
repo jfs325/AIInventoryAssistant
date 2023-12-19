@@ -6,14 +6,14 @@ The purpose of this software is to save users time when taking physical inventor
 
  Below is a visual representation of how data flows through the application: 
 
-![Alt Text](Application_Process.png)
+![Alt Text](./client/src/TutorialPage/Pictures/Application_Process.png)
 
 # Example use case
 Here is an example of a list of commands you could give the application, for taking inventory of food items:
-![Alt text](commands.png)
+![Alt text](./client/src/TutorialPage/Pictures/commands.png)
 
 Here is the spreadsheet that is returned to the user:
-![Alt text](result.png)
+![Alt text](./client/src/TutorialPage/Pictures/result.png)
 
 Note that the application was able to intelligently track previously stated items, and add or subtract units from those items to free up time for the user to keep taking inventory.
 

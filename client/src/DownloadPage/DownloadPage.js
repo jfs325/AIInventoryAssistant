@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import "./DownloadPage.css";
 import "../styling.css";
+import Header from '../Header/Header';
 
 
 
@@ -47,6 +48,7 @@ const DownloadPage = () => {
   }
   return (
     <div>
+      <Header />
       {loading && <LoadingScreen/>}
       <div className='download-container'>
         <div className='header-text'>
