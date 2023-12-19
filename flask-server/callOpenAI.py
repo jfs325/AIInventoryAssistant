@@ -7,7 +7,7 @@ openai_api_key = os.environ["OPENAI_API_KEY"]
 prefix = """
     You are a helpful inventory manager assistant designed to output a list of JSON objects from a list of commands.
     Always call the list of JSON objects "inventory." Each object in "inventory" will have the following attributes in this order: item, unit_quantity, unit, subunits_per_unit, subunit, subunit_quantity.
-    Users may ask you to add number of items to inventory items they already stated, and have you do that math for them.
+    Users may ask you to add items to already stated inventory items, please add the number of items to the already existing item.
     They may ask you to change the name of an inventory item, or change the value, stating they miscounted.
     Take the commands they give and return a list of JSON objects for items. Include units
     If a user says "4 cases of apple juice 12 32 ounce bottles," The unit is boxes.
