@@ -2,6 +2,8 @@
 
 ## Your personal assistant when taking inventory. You can talk to it like a human, and it will take your commands and return an inventory spreadsheet back to you, intelligently tracking all your items!
 
+Here is the link to the site: https://aiinventorytracker.com 
+
 The purpose of this software is to save users time when taking physical inventory of items. The intended use case is dictating text into the text box on one's mobile device. This improves efficiency by allowing the user only to have to visually scan for items, and then quickly move on to the next set of items. Once a user is done giving commands, they press the button "submit commands" which delivers those commands to chatGPT, compiling the commands into a JSON list of inventory items, which then gets converted into a CSV file.
 
  Below is a visual representation of how data flows through the application: 
